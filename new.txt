@@ -1,1 +1,1 @@
-My first repository.
+This is just an example of my first commit in github. 

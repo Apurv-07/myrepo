@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .floor{
+            display: flex;
+            height: 496px;
+            justify-content: center;
+            border-bottom: 5px solid black;
+        }
+        .myBall{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background: red;
+            position: relative;
+            animation: mymove 2s ease-in-out infinite;
+        }
+        .Horizon{
+            height: 200px;
+            background: green;
+        }
+        @keyframes mymove{
+            0%{
+                top: 100px;
+            }
+            50%{
+                top: 400px;
+            }
+            100%{
+                top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floor"><div class="myBall"></div></div><div>
+        <div class="Horizon"></div>
+</body>
+</html>

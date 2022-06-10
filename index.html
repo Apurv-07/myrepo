@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <style>
             *{
                 margin: 0px;
                 padding: 0px;
             }
-            
             body{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow-x: hidden; 
                 background-image: url("https://wallpapercave.com/dwp1x/e8xnTpf.jpg");
                 background-repeat: no-repeat;
                 background-size: 100%;
@@ -22,7 +27,7 @@
                 margin: 20px;
             }
             .home .nav{
-                margin-left: 61%;
+                margin-left: 54%;
                 padding-top: 20px;
                 font-size: 24px;
             }
@@ -55,6 +60,41 @@
             .bod1 p{
                 margin-top: 20px;
             }
+            .home .nav .nav-btn{
+                display: none;
+            }
+            .nav-m{
+                display: none;
+            }
+
+            @media (min-width: 360px) and (max-width: 600px){
+                body{
+                    background: green;
+                }
+                .home .nav a{
+                    display: none;
+                }
+                .home .nav .nav-btn{
+                    display: block;
+                    margin-left: -30px;
+                }
+                .nav-m{
+                    display: block;
+                    position: absolute;
+                    z-index: 1;
+                    width: 100vw;
+                }
+                .nav-m nav{
+                    text-align: center;
+                    background: cornflowerblue;
+                }
+                .nav-m a{
+                    font-size: 30px;
+                    color: red;
+                    text-decoration: none;
+                }
+
+            }
 
         </style>
     </head>
@@ -62,13 +102,19 @@
         <div class="home">
             <h1>My Website</h1>
             <div class="nav">
+                <button class="nav-btn" onclick="myfun()">CLICK</button>
                 <nav><a href="#">Home</a></nav>
                 <nav><a href="#">About</a></nav>
                 <nav><a href="https://Apurv-07.github.io/myrepo/animation.html">Services</a></nav>
                 <nav><a href="#">Contact</a></nav>
             </div>
         </div>
-
+        <div class="nav-m" style="display: none">
+            <nav><a href="#">Home</a></nav>
+            <nav><a href="#">About</a></nav>
+            <nav><a href="https://Apurv-07.github.io/myrepo/animation.html">Services</a></nav>
+            <nav><a href="#">Contact</a></nav>
+        </div>
         <div class="bod">
         <div class="bod1">  
             <h1>Lorem Ipsum</h1>
@@ -78,5 +124,15 @@
 What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div></div>
+        <script>
+            function myfun(){
+                var dis=document.querySelector(".nav-m");
+                if(dis.style.display=="block"){
+                    dis.style.display="none";
+                }else{
+                    dis.style.display="block";
+                }
+            }
+        </script>
     </body>
 </html>
